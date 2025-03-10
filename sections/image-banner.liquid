@@ -2,13 +2,17 @@
 
 
 {% liquid
+  # Shows section by default
   assign showSection = true
+  # Hides section if the setting for lazy loading is enabled
   if section.settings.lazy_load_section
     assign showSection = false
   endif
+  # Shows section if it is in shopify admin panel or the visitor is on /index
   if request.path contains 'index' or request.design_mode
     assign showSection = true
   endif
+  # failsafe so that the user doesn't use this setting on other pages except index
   unless template contains 'index'
     assign showSection = true
   endunless

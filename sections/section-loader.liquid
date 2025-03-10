@@ -29,9 +29,7 @@
     // If cached data exists and hasn't expired, use it
     if (cachedData && currentTime - cachedData.timestamp < CACHE_EXPIRY_TIME) {
       console.log('Loading from cache:', sectionId);
-      const html = sectionParser.parseFromString(cachedData.html, 'text/html');
-      sectionContainer.before(html.querySelector('.shopify-section'));
-      sectionContainer.remove();
+      sectionContainer.parentElement.innerHTML = cachedData.html;
       return;
     }
 
@@ -46,9 +44,7 @@
         sectionCache[sectionId] = { html, timestamp: Date.now() };
         localStorage.setItem(SECTION_CACHE_LOCAL_STORAGE_KEY, JSON.stringify(sectionCache));  
         // Insert the new section HTML after the container
-        const newSection = sectionParser.parseFromString(html, 'text/html');
-        sectionContainer.before(newSection.querySelector('.shopify-section'));
-        sectionContainer.remove();
+        sectionContainer.parentElement.innerHTML = html;
       })
       .catch((error) => console.error('Error loading section:', error));
   });

@@ -2,12 +2,12 @@
 
 
 {% liquid
-  assign showSection = false
-  if request.path contains 'index' or request.design_mode
-    assign showSection = true
-  endif
+  assign showSection = true
   if section.settings.lazy_load_section
     assign showSection = false
+  endif
+  if request.path contains 'index' or request.design_mode
+    assign showSection = true
   endif
   unless template contains 'index'
     assign showSection = true

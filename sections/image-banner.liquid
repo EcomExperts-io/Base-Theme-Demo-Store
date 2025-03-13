@@ -3,22 +3,22 @@
 
 {% liquid
   # Shows section by default
-  assign showSection = true
+  assign show_section = true
   # Hides section if the setting for lazy loading is enabled
   if section.settings.lazy_load_section
-    assign showSection = false
+    assign show_section = false
   endif
   # Shows section if it is in shopify admin panel or the visitor is on /index
   if request.path contains 'index' or request.design_mode
-    assign showSection = true
+    assign show_section = true
   endif
   # failsafe so that the user doesn't use this setting on other pages except index
   unless template contains 'index'
-    assign showSection = true
+    assign show_section = true
   endunless
 %}
 
-{%- if showSection -%}
+{%- if show_section -%}
   {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
     {%- style -%}
     @media screen and (max-width: 749px) {

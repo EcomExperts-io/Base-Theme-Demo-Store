@@ -1967,6 +1967,35 @@
           "options__2": {
             "label": "2 columns"
           }
+        },
+        "site_speed": {
+          "header": {
+            "content": "Site speed"
+          },
+          "loading_strategy": {
+            "options__1": {
+              "label": "Lazy"
+            },
+            "options__2": {
+              "label": "Eager"
+            },
+            "label": "Loading strategy"
+          },
+          "number_of_images_to_preload": {
+            "label": "Number of images to preload"
+          },
+          "lazy_load_section": {
+            "label": "Lazy Load Section",
+            "info": "⚠️ Lazy load the section. Only works on the homepage. Use min-height to prevent layout shifts."
+          },
+          "section_min_height_desktop": {
+            "label": "Minimum height on desktop",
+            "info": "Set the minimum height of the section on desktop."
+          },
+          "section_min_height_mobile": {
+            "label": "Minimum height on mobile",
+            "info": "Set the minimum height of the section on mobile."
+          }
         }
       }
     },

@@ -361,7 +361,7 @@
   .banner--desktop-transparent .banner__box {
     padding: 4rem 0;
     background: transparent;
-    max-width: 89rem;
+    max-width: 110rem;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -434,7 +434,7 @@
 }
 
 .banner__heading {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .banner__box .banner__heading + * {
@@ -489,4 +489,44 @@
   .banner--desktop-transparent .rte a:hover {
     color: currentColor;
   }
+}
+
+hero-banner-slider {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+hero-banner-slider .swiper-slide {
+  width: 100% !important;
+  min-width: 100%;
+}
+
+hero-banner-slider .swiper-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+hero-banner-slider .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+hero-banner-slider .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #D9D9D9;
+    border-radius: 50px;
+    margin-inline: 3px;
+    cursor: pointer;
+}
+
+hero-banner-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #605D5D;
 }

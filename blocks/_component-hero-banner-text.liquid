@@ -1,0 +1,92 @@
+{%- style -%}
+  #text-{{ block.id }}  {
+    padding-bottom: {{ block.settings.padding_bottom_mobile }}px;
+    padding-top: {{ block.settings.padding_top_mobile }}px;
+  }
+
+  @media (min-width: 768px) {
+    #text-{{ block.id }}  {
+      padding-bottom: {{ block.settings.padding_bottom_desktop_desktop }}px;
+      padding-top: {{ block.settings.padding_top_desktop_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div id="text-{{ block.id }}" class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+  <p>{{ block.settings.text }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.image-banner.blocks.text.name",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "default": "t:sections.image-banner.blocks.text.settings.text.default",
+      "label": "t:sections.image-banner.blocks.text.settings.text.label"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+        },
+        {
+          "value": "subtitle",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+        },
+        {
+          "value": "caption-with-letter-spacing",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+        }
+      ],
+      "default": "body",
+      "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+    },
+    {
+      "type": "header",
+      "content": "Spacing settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding top mobile [Mobile]",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom mobile [Mobile]",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop_desktop",
+      "label": "Padding top desktop [Desktop]",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop_desktop",
+      "label": "Padding bottom desktop [Desktop]",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-banner.blocks.text.name"
+    }
+  ]
+}
+{% endschema %}

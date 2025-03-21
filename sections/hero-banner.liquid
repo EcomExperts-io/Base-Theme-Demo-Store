@@ -1,0 +1,82 @@
+{{ 'section-hero-banner.css' | asset_url | stylesheet_tag: preload: true }}
+
+<hero-banner-slider>
+  <div class="swiper-hero-banner">
+    <div class="swiper-wrapper">
+      {% content_for 'blocks' %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</hero-banner-slider>
+
+<script src="{{ 'swiper7.4.1.min.js' | asset_url }}" defer="defer" id="swiper-script"></script>
+<script type="text/javascript">
+  if (!customElements.get('hero-banner-slider')) {
+    class HeroBannerSlider extends HTMLElement {
+      constructor() {
+        super();
+        this.swiper = null;
+      }
+
+      connectedCallback() {
+        if (typeof Swiper !== 'undefined') {
+          this.initSwiper();
+        } else {
+          document.querySelector('#swiper-script').addEventListener('load', () => this.initSwiper());
+        }
+      }
+
+      initSwiper() {
+        this.swiper = new Swiper('.swiper-hero-banner', {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          direction: 'horizontal',
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        });
+      }
+
+      disconnectedCallback() {
+        if (this.swiper) {
+          this.swiper.destroy();
+        }
+      }
+    }
+
+    customElements.define('hero-banner-slider', HeroBannerSlider);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Hero banner",
+  "blocks": [{ "type": "_component-hero-banner-slider" }, { "type": "@app" }],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay slider",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Slider duration",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero banner"
+    }
+  ]
+}
+{% endschema %}

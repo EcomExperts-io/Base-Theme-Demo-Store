@@ -1,0 +1,42 @@
+<div
+  class="banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
+  {{ block.shopify_attributes }}
+>
+  {%- if block.settings.button_label != blank -%}
+    <a
+      {% if block.settings.button_link == blank %}
+        role="link" aria-disabled="true"
+      {% else %}
+        href="{{ block.settings.button_link }}"
+      {% endif %}
+      class="button"
+    >
+      {{- block.settings.button_label | escape -}}
+    </a>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.image-banner.blocks.buttons.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.image-banner.blocks.buttons.settings.button_label_1.default",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+      "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-banner.blocks.buttons.name"
+    }
+  ]
+}
+{% endschema %}

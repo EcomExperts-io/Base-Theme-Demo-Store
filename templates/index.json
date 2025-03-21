@@ -9,117 +9,163 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero_banner_3HMiPy": {
+      "type": "hero-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "component_hero_banner_slider_RyPfzp": {
+          "type": "_component-hero-banner-slider",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
+            "image": "shopify://shop_images/pexels-misolo.png",
+            "image_overlay_opacity": 30,
+            "image_height": "large",
+            "desktop_content_position": "middle-center",
+            "show_text_box": false,
+            "desktop_content_alignment": "center",
+            "color_scheme": "scheme-4",
+            "image_behavior": "none",
+            "mobile_content_alignment": "center",
+            "stack_images_on_mobile": true,
+            "show_text_below": false
+          },
+          "blocks": {
+            "component_hero_banner_heading_FVTGrc": {
+              "type": "_component-hero-banner-heading",
+              "settings": {
+                "heading": "<strong>Style with Purpose – Beauty that looks good & does good.</strong>",
+                "heading_size": "h1"
+              }
+            },
+            "component_hero_banner_text_dqgmwn": {
+              "type": "_component-hero-banner-text",
+              "settings": {
+                "text": "Sustainably crafted, ethically made – fashion that empowers you and the planet",
+                "text_style": "body"
+              }
+            },
+            "component_hero_banner_button_QPDkEj": {
+              "type": "_component-hero-banner-button",
+              "settings": {
+                "button_label_1": "SHOP ALL",
+                "button_link_1": "#",
+                "button_style_secondary_1": false,
+                "button_label_2": "",
+                "button_link_2": "",
+                "button_style_secondary_2": false
+              }
+            }
+          },
+          "block_order": [
+            "component_hero_banner_heading_FVTGrc",
+            "component_hero_banner_text_dqgmwn",
+            "component_hero_banner_button_QPDkEj"
+          ]
         },
-        "button": {
-          "type": "buttons",
+        "component_hero_banner_slider_AiMWyt": {
+          "type": "_component-hero-banner-slider",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
+            "image": "shopify://shop_images/pexels-misolo.png",
+            "image_overlay_opacity": 30,
+            "image_height": "large",
+            "desktop_content_position": "middle-center",
+            "show_text_box": false,
+            "desktop_content_alignment": "center",
+            "color_scheme": "scheme-4",
+            "image_behavior": "none",
+            "mobile_content_alignment": "center",
+            "stack_images_on_mobile": true,
+            "show_text_below": false
+          },
+          "blocks": {
+            "component_hero_banner_heading_zhBE7D": {
+              "type": "_component-hero-banner-heading",
+              "settings": {
+                "heading": "<strong>Style with Purpose – Beauty that looks good & does good.</strong>",
+                "heading_size": "h1"
+              }
+            },
+            "component_hero_banner_text_tdXfma": {
+              "type": "_component-hero-banner-text",
+              "settings": {
+                "text": "Sustainably crafted, ethically made – fashion that empowers you and the planet",
+                "text_style": "body"
+              }
+            },
+            "component_hero_banner_button_CVKfNW": {
+              "type": "_component-hero-banner-button",
+              "settings": {
+                "button_label_1": "SHOP ALL",
+                "button_link_1": "#",
+                "button_style_secondary_1": false,
+                "button_label_2": "",
+                "button_link_2": "",
+                "button_style_secondary_2": false
+              }
+            }
+          },
+          "block_order": [
+            "component_hero_banner_heading_zhBE7D",
+            "component_hero_banner_text_tdXfma",
+            "component_hero_banner_button_CVKfNW"
+          ]
+        },
+        "component_hero_banner_slider_QTHqNi": {
+          "type": "_component-hero-banner-slider",
+          "settings": {
+            "image": "shopify://shop_images/pexels-misolo.png",
+            "image_overlay_opacity": 30,
+            "image_height": "large",
+            "desktop_content_position": "middle-center",
+            "show_text_box": false,
+            "desktop_content_alignment": "center",
+            "color_scheme": "scheme-4",
+            "image_behavior": "none",
+            "mobile_content_alignment": "center",
+            "stack_images_on_mobile": true,
+            "show_text_below": false
+          },
+          "blocks": {
+            "component_hero_banner_heading_nqDxMN": {
+              "type": "_component-hero-banner-heading",
+              "settings": {
+                "heading": "<strong>Style with Purpose – Beauty that looks good & does good.</strong>",
+                "heading_size": "h1"
+              }
+            },
+            "component_hero_banner_text_b88ThE": {
+              "type": "_component-hero-banner-text",
+              "settings": {
+                "text": "Sustainably crafted, ethically made – fashion that empowers you and the planet",
+                "text_style": "body"
+              }
+            },
+            "component_hero_banner_button_ENg8kx": {
+              "type": "_component-hero-banner-button",
+              "settings": {
+                "button_label_1": "SHOP ALL",
+                "button_link_1": "#",
+                "button_style_secondary_1": false,
+                "button_label_2": "",
+                "button_link_2": "",
+                "button_style_secondary_2": false
+              }
+            }
+          },
+          "block_order": [
+            "component_hero_banner_heading_nqDxMN",
+            "component_hero_banner_text_b88ThE",
+            "component_hero_banner_button_ENg8kx"
+          ]
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "component_hero_banner_slider_RyPfzp",
+        "component_hero_banner_slider_AiMWyt",
+        "component_hero_banner_slider_QTHqNi"
       ],
-      "settings": {
-        "image": "shopify://shop_images/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
-        "image_2": "shopify://shop_images/wooden-toothbrushes-lined-up-against-a-green-background.jpg",
-        "image_overlay_opacity": 30,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "fist-of-collections": {
-      "type": "main-list-collections",
-      "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "columns_mobile": "2"
-      }
-    },
-    "image_with_text_UnGP37": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_M7BE4Y": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_WRhMqM": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "caption_epYF98": {
-          "type": "caption",
-          "settings": {
-            "caption": "Add a tagline",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "button_eXxq6Y": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_M7BE4Y",
-        "text_WRhMqM",
-        "caption_epYF98",
-        "button_eXxq6Y"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/a-model-in-summer-fashion-with-grey-backdrop.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+      "settings": {}
     }
   },
   "order": [
-    "image_banner",
-    "fist-of-collections",
-    "image_with_text_UnGP37"
+    "hero_banner_3HMiPy"
   ]
 }

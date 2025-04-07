@@ -1,5 +1,5 @@
 <div
-  class="banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
+  class="banner__button{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
   {{ block.shopify_attributes }}
 >
   {%- if block.settings.button_label != blank -%}
@@ -12,6 +12,9 @@
       class="button"
     >
       {{- block.settings.button_label | escape -}}
+      <div class="svg-wrapper">
+        {{ 'icon-navigate-arrow.svg' | inline_asset_content }}
+      </div>
     </a>
   {%- endif -%}
 </div>

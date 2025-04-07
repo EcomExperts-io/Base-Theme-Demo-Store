@@ -1,0 +1,172 @@
+{%- style -%}
+  #section-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+  }
+
+  #section-{{ section.id }} .icon-with-text-child {
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+  #section-{{ section.id }} .icon-with-text-child {
+    margin-top: {{ section.settings.margin_top_desktop }}px;
+    margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    #section-{{ section.id }} .icon-with-text-child {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    #section-{{ section.id }} .icon-with-text-child {
+      margin-top: {{ section.settings.margin_top_mobile }}px;
+      margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+    }
+  }
+{%- endstyle -%}
+
+{{ 'section-icon-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="icon-with-text" id="section-{{ section.id }}">
+  <div class="icon-with-text-child page-width">
+    {% for block in section.blocks %}
+      <div class="icon-with-text-item" {{ block.shopify_attributes }}>
+        <div class="icon-with-text-item-image">
+          <img
+            src="{{ block.settings.image | image_url: width: 100 }}"
+            alt="{{ block.settings.title }}"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            loading="lazy"
+          >
+        </div>
+        <h2>{{ block.settings.title }}</h2>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{%- schema -%}
+{
+  "name": "Icon with text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Collections"
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding top [Desktop]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding bottom [Desktop]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding top [Mobile]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding bottom [Mobile]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Margin top [Desktop]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Margin bottom [Desktop]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Margin top [Mobile]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Margin bottom [Mobile]",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_with_text",
+      "name": "Icon with text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Add Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon with text",
+      "blocks": [
+        {
+          "type": "icon_with_text"
+        }
+      ]
+    }
+  ]
+}
+{%- endschema -%}

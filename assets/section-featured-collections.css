@@ -1,0 +1,140 @@
+.featured-collections-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 130%;
+  color: #000000;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.featured-collections-collections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.featured-collections-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #f4f4f4;
+  border-radius: 5px;
+  padding: 36px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.featured-collections-collection-link {
+  margin: 30px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-collections-collection img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 244px;
+  width: 100%;
+  max-width: 244px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.featured-collections-collection-title {
+  margin: 0px;
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.featured-collections-collection-count {
+  padding: 10px 0px;
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.featured-collections-button {
+  border: 1px solid black;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .featured-collections-collections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .featured-collections-collections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-collections-collection-title {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  .featured-collections-collection {
+    padding: 20px;
+  }
+
+  .featured-collections-collection-image {
+    max-width: 125px;
+    max-height: 125px;
+  }
+
+  .featured-collections-button {
+    width: 25px;
+    height: 25px;
+    margin: 10px 0px;
+  }
+
+  .featured-collections-collection-link {
+    margin: 20px 0px;
+  }
+
+  .featured-collections-title {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+}

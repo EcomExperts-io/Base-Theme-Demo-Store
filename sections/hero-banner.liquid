@@ -10,44 +10,7 @@
 </hero-banner-slider>
 
 <script src="{{ 'swiper7.4.1.min.js' | asset_url }}" defer="defer" id="swiper-script"></script>
-<script type="text/javascript">
-  if (!customElements.get('hero-banner-slider')) {
-    class HeroBannerSlider extends HTMLElement {
-      constructor() {
-        super();
-        this.swiper = null;
-      }
-
-      connectedCallback() {
-        if (typeof Swiper !== 'undefined') {
-          this.initSwiper();
-        } else {
-          document.querySelector('#swiper-script').addEventListener('load', () => this.initSwiper());
-        }
-      }
-
-      initSwiper() {
-        this.swiper = new Swiper('.swiper-hero-banner', {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          direction: 'horizontal',
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
-      }
-
-      disconnectedCallback() {
-        if (this.swiper) {
-          this.swiper.destroy();
-        }
-      }
-    }
-
-    customElements.define('hero-banner-slider', HeroBannerSlider);
-  }
-</script>
+<script src="{{ 'section-hero-banner.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {

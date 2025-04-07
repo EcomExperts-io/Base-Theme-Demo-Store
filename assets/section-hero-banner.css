@@ -441,12 +441,16 @@
   margin-top: 1rem;
 }
 
-.banner__buttons {
+.banner__button {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 1rem;
   max-width: 45rem;
   word-break: break-word;
+}
+
+.banner__button svg path {
+  fill: rgb(var(--color-button-text));
 }
 
 @media screen and (max-width: 749px) {
@@ -471,7 +475,7 @@
   }
 }
 
-.banner__box > * + .banner__buttons {
+.banner__box > * + .banner__button {
   margin-top: 2rem;
 }
 
@@ -514,7 +518,7 @@ hero-banner-slider .swiper-pagination {
     align-items: center;
     position: absolute;
     bottom: 15px;
-    left: 50%;
+    left: 50%!important;
     transform: translate(-50%, -50%);
 }
 
@@ -525,6 +529,7 @@ hero-banner-slider .swiper-pagination-bullet {
     border-radius: 50px;
     margin-inline: 3px;
     cursor: pointer;
+    opacity: 1;
 }
 
 hero-banner-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {

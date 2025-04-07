@@ -1,0 +1,130 @@
+{%- style -%}
+  #section-{{ section.id }} {
+    background-image: url({{ section.settings.background_image | image_url: width: section.settings.background_image.width }});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #section-{{ section.id }} .newsletter-child {
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    #section-{{ section.id }} .newsletter-child {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+{%- endstyle -%}
+
+{{ 'section-newsletter.css' | asset_url | stylesheet_tag }}
+
+<div class="newsletter" id="section-{{ section.id }}">
+  <div class="newsletter-child page-width">
+    <h2 class="newsletter-title">
+      {{ section.settings.title }}
+    </h2>
+    <p class="newsletter-description">
+      {{ section.settings.description }}
+    </p>
+    {% form 'customer', class: 'newsletter_form' %}
+      <input
+        type="email"
+        name="contact[email]"
+        aria-required="true"
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="email"
+        placeholder="Enter your email"
+        class="newsletter-form-input"
+        required
+      >
+      <button type="submit" class="newsletter-form-button">
+        {{ section.settings.button_text }}
+      </button>
+      {%- if form.errors -%}
+        <div class="newsletter-form-error">
+          {{ form.errors | default_errors }}
+        </div>
+      {%- endif -%}
+    {% endform %}
+  </div>
+</div>
+
+{%- schema -%}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Subscribe to our newsletter to get the latest news and updates."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Sign up"
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding top [Desktop]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding bottom [Desktop]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding top [Mobile]",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Padding bottom [Mobile]",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{%- endschema -%}

@@ -9,13 +9,13 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/design-graphic.png",
-    "logo_height": 60,
+    "logo": "shopify://shop_images/MK_Beauty_1.svg",
+    "logo_height": 20,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -48,8 +48,8 @@
     "card_color_scheme": "scheme-2",
     "card_border_thickness": 2,
     "card_border_opacity": 10,
-    "card_corner_radius": 20,
-    "card_shadow_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": -2,
     "card_shadow_vertical_offset": 2,
     "card_shadow_blur": 10,
@@ -153,41 +153,41 @@
           "link_list_tRGQXg": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "FIND A STORE",
+              "menu": "main-menu"
             }
           },
-          "brand_information_mfQiAe": {
-            "type": "brand_information",
+          "link_list_PkRWzF": {
+            "type": "link_list",
             "settings": {
-              "show_social": false
+              "heading": "GET HELP",
+              "menu": "customer-account-main-menu"
             }
           },
-          "image_ignBDg": {
-            "type": "image",
+          "link_list_8HhKHz": {
+            "type": "link_list",
             "settings": {
-              "image": "shopify://shop_images/design-graphic.png",
-              "image_width": 65,
-              "alignment": "center"
+              "heading": "ABOUT US",
+              "menu": "main-menu"
             }
           }
         },
         "block_order": [
           "link_list_tRGQXg",
-          "brand_information_mfQiAe",
-          "image_ignBDg"
+          "link_list_PkRWzF",
+          "link_list_8HhKHz"
         ],
         "settings": {
           "color_scheme": "",
-          "newsletter_enable": true,
+          "newsletter_enable": false,
           "newsletter_heading": "Subscribe to our emails",
-          "enable_follow_on_shop": true,
-          "show_social": true,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
-          "payment_enable": true,
-          "show_policy": true,
-          "margin_top": 64,
+          "enable_follow_on_shop": false,
+          "show_social": false,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": false,
+          "show_policy": false,
+          "margin_top": 0,
           "padding_top": 36,
           "padding_bottom": 36
         }

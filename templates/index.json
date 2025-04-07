@@ -33,25 +33,28 @@
               "settings": {
                 "heading": "<strong>Style with Purpose – Beauty that looks good & does good.</strong>",
                 "heading_size": "h1"
-              }
+              },
+              "blocks": {}
             },
             "component_hero_banner_text_dqgmwn": {
               "type": "_component-hero-banner-text",
               "settings": {
                 "text": "Sustainably crafted, ethically made – fashion that empowers you and the planet",
-                "text_style": "body"
-              }
+                "text_style": "body",
+                "padding_top_mobile": 15,
+                "padding_bottom_mobile": 15,
+                "padding_top_desktop_desktop": 15,
+                "padding_bottom_desktop_desktop": 40
+              },
+              "blocks": {}
             },
             "component_hero_banner_button_QPDkEj": {
               "type": "_component-hero-banner-button",
               "settings": {
-                "button_label_1": "SHOP ALL",
-                "button_link_1": "#",
-                "button_style_secondary_1": false,
-                "button_label_2": "",
-                "button_link_2": "",
-                "button_style_secondary_2": false
-              }
+                "button_label": "Button label",
+                "button_link": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -81,25 +84,28 @@
               "settings": {
                 "heading": "<strong>Style with Purpose – Beauty that looks good & does good.</strong>",
                 "heading_size": "h1"
-              }
+              },
+              "blocks": {}
             },
             "component_hero_banner_text_tdXfma": {
               "type": "_component-hero-banner-text",
               "settings": {
                 "text": "Sustainably crafted, ethically made – fashion that empowers you and the planet",
-                "text_style": "body"
-              }
+                "text_style": "body",
+                "padding_top_mobile": 15,
+                "padding_bottom_mobile": 15,
+                "padding_top_desktop_desktop": 15,
+                "padding_bottom_desktop_desktop": 40
+              },
+              "blocks": {}
             },
             "component_hero_banner_button_CVKfNW": {
               "type": "_component-hero-banner-button",
               "settings": {
-                "button_label_1": "SHOP ALL",
-                "button_link_1": "#",
-                "button_style_secondary_1": false,
-                "button_label_2": "",
-                "button_link_2": "",
-                "button_style_secondary_2": false
-              }
+                "button_label": "Button label",
+                "button_link": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -129,25 +135,28 @@
               "settings": {
                 "heading": "<strong>Style with Purpose – Beauty that looks good & does good.</strong>",
                 "heading_size": "h1"
-              }
+              },
+              "blocks": {}
             },
             "component_hero_banner_text_b88ThE": {
               "type": "_component-hero-banner-text",
               "settings": {
                 "text": "Sustainably crafted, ethically made – fashion that empowers you and the planet",
-                "text_style": "body"
-              }
+                "text_style": "body",
+                "padding_top_mobile": 15,
+                "padding_bottom_mobile": 15,
+                "padding_top_desktop_desktop": 15,
+                "padding_bottom_desktop_desktop": 40
+              },
+              "blocks": {}
             },
             "component_hero_banner_button_ENg8kx": {
               "type": "_component-hero-banner-button",
               "settings": {
-                "button_label_1": "SHOP ALL",
-                "button_link_1": "#",
-                "button_style_secondary_1": false,
-                "button_label_2": "",
-                "button_link_2": "",
-                "button_style_secondary_2": false
-              }
+                "button_label": "Button label",
+                "button_link": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -162,10 +171,181 @@
         "component_hero_banner_slider_AiMWyt",
         "component_hero_banner_slider_QTHqNi"
       ],
-      "settings": {}
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "collections_promotion_HMe7bT": {
+      "type": "collections-promotion",
+      "blocks": {
+        "card_xGfnHi": {
+          "type": "card",
+          "settings": {
+            "background_color": "#ffffff",
+            "image": "shopify://shop_images/Mask_group_31972532-c4bc-4ab9-b330-a9f95d74363d.png",
+            "title": "New Arrival",
+            "link": "#"
+          }
+        },
+        "card_Vhtjqe": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f4f4f4",
+            "image": "shopify://shop_images/Mask_group_1_2aafeec4-2ecc-41b4-9172-78fd4e2b0f60.png",
+            "title": "Best Sellers",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "card_xGfnHi",
+        "card_Vhtjqe"
+      ],
+      "settings": {
+        "title": "Seasonal hues, effortlessly stylish",
+        "sub_title": "Stay bold | Stay fun | Game on!",
+        "description": "Step into a world of color with MK Beauty! This season’s collection is all about bold self-expression, vibrant hues, and playful energy. Celebrate your unique style and embrace the joy of fashion with confidence and creativity.",
+        "link_text": "Let's Play",
+        "link": "#",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "featured_collections_mCW4Cm": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_pYLjgz": {
+          "type": "collection",
+          "settings": {
+            "collection": "spring"
+          }
+        },
+        "collection_c6AzNL": {
+          "type": "collection",
+          "settings": {
+            "collection": "summer"
+          }
+        },
+        "collection_PAqbPj": {
+          "type": "collection",
+          "settings": {
+            "collection": "spring"
+          }
+        },
+        "collection_LjLHDk": {
+          "type": "collection",
+          "settings": {
+            "collection": "summer"
+          }
+        }
+      },
+      "block_order": [
+        "collection_pYLjgz",
+        "collection_c6AzNL",
+        "collection_PAqbPj",
+        "collection_LjLHDk"
+      ],
+      "settings": {
+        "title": "Collections",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 80,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "exclusive_collection_promo_MwLLyn": {
+      "type": "exclusive-collection-promo",
+      "settings": {
+        "background_image": "shopify://shop_images/Rectangle_26070.png",
+        "collection": "spring",
+        "products_limit": 9,
+        "show_vendor": false,
+        "enable_swatches": false,
+        "swatch_type": "image",
+        "swatch_trigger": "Color",
+        "quick_add": "standard",
+        "image_ratio": "portrait",
+        "background_color": "#fcfdf3",
+        "margin_top_desktop": 20,
+        "margin_bottom_desktop": 20,
+        "margin_top_mobile": 20,
+        "margin_bottom_mobile": 20
+      }
+    },
+    "icon_with_text_RjUC96": {
+      "type": "icon-with-text",
+      "blocks": {
+        "icon_with_text_G6DGkk": {
+          "type": "icon_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Natural.png",
+            "title": "Natural Ingredients"
+          }
+        },
+        "icon_with_text_9N88Wb": {
+          "type": "icon_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Vegan.png",
+            "title": "Vegan & Cruelty-Free"
+          }
+        },
+        "icon_with_text_JTKKcx": {
+          "type": "icon_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Quality.png",
+            "title": "Professional Quality"
+          }
+        },
+        "icon_with_text_MUDgMN": {
+          "type": "icon_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Leaf.png",
+            "title": "Sustainable Beauty"
+          }
+        }
+      },
+      "block_order": [
+        "icon_with_text_G6DGkk",
+        "icon_with_text_9N88Wb",
+        "icon_with_text_JTKKcx",
+        "icon_with_text_MUDgMN"
+      ],
+      "settings": {
+        "title": "Collections",
+        "background_color": "#f4f4f4",
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "margin_top_desktop": 80,
+        "margin_bottom_desktop": 80,
+        "margin_top_mobile": 30,
+        "margin_bottom_mobile": 30
+      }
+    },
+    "newsletter_dWCL3K": {
+      "type": "newsletter",
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_1000009737.png",
+        "title": "JOIN MK BEAUTY CLUB",
+        "description": "Do you want to receive Barton's latest on product releases and exclusive offers? Enter your email & stay in the know!",
+        "button_text": "Sign up",
+        "padding_top_desktop": 95,
+        "padding_bottom_desktop": 95,
+        "padding_top_mobile": 85,
+        "padding_bottom_mobile": 85
+      }
     }
   },
   "order": [
-    "hero_banner_3HMiPy"
+    "hero_banner_3HMiPy",
+    "collections_promotion_HMe7bT",
+    "featured_collections_mCW4Cm",
+    "exclusive_collection_promo_MwLLyn",
+    "icon_with_text_RjUC96",
+    "newsletter_dWCL3K"
   ]
 }

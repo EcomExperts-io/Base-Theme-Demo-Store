@@ -19,6 +19,8 @@
 
   {% for scheme in settings.color_schemes -%}
     {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+    {% assign dark_mode_classes = dark_mode_classes | append: ', .dark-mode-active .color-' | append: scheme.id %}
+
     {% if forloop.index == 1 -%}
       :root,
     {%- endif %}
@@ -54,12 +56,32 @@
     --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
     --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
     --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+
+    --dark-color-background: {{ scheme.settings.dark_background.red }},{{ scheme.settings.dark_background.green }},{{ scheme.settings.dark_background.blue }};
+    --dark-color-foreground: {{ scheme.settings.dark_text.red }},{{ scheme.settings.dark_text.green }},{{ scheme.settings.dark_text.blue }};
+    --dark-color-button: {{ scheme.settings.dark_button.red }},{{ scheme.settings.dark_button.green }},{{ scheme.settings.dark_button.blue }};
+    --dark-color-button-label: {{ scheme.settings.dark_button_label.red }},{{ scheme.settings.dark_button_label.green }},{{ scheme.settings.dark_button_label.blue }};
+    --dark-color-secondary-button-label: {{ scheme.settings.dark_secondary_button_label.red }},{{ scheme.settings.dark_secondary_button_label.green }},{{ scheme.settings.dark_secondary_button_label.blue }};
+    --dark-color-shadow: {{ scheme.settings.dark_shadow.red }},{{ scheme.settings.dark_shadow.green }},{{ scheme.settings.dark_shadow.blue }};
+    --dark-color-badge-foreground: {{ scheme.settings.dark_badge_foreground.red }},{{ scheme.settings.dark_badge_foreground.green }},{{ scheme.settings.dark_badge_foreground.blue }};
+    --dark-color-badge-background: {{ scheme.settings.dark_badge_background.red }},{{ scheme.settings.dark_badge_background.green }},{{ scheme.settings.dark_badge_background.blue }};
+    --dark-color-badge-border: {{ scheme.settings.dark_badge_border.red }},{{ scheme.settings.dark_badge_border.green }},{{ scheme.settings.dark_badge_border.blue }};
+    --dark-color-gradient-background: {{ scheme.settings.dark_gradient_background.red }},{{ scheme.settings.dark_gradient_background.green }},{{ scheme.settings.dark_gradient_background.blue }};
+    --dark-color-gradient-foreground: {{ scheme.settings.dark_gradient_foreground.red }},{{ scheme.settings.dark_gradient_foreground.green }},{{ scheme.settings.dark_gradient_foreground.blue }};
+    --dark-color-gradient-button: {{ scheme.settings.dark_gradient_button.red }},{{ scheme.settings.dark_gradient_button.green }},{{ scheme.settings.dark_gradient_button.blue }};
+    --dark-color-gradient-button-label: {{ scheme.settings.dark_gradient_button_label.red }},{{ scheme.settings.dark_gradient_button_label.green }},{{ scheme.settings.dark_gradient_button_label.blue }};
+    --dark-color-gradient-secondary-button-label: {{ scheme.settings.dark_gradient_secondary_button_label.red }},{{ scheme.settings.dark_gradient_secondary_button_label.green }},{{ scheme.settings.dark_gradient_secondary_button_label.blue }};
   }
   {% endfor %}
 
   {{ scheme_classes | prepend: 'body' }} {
     color: rgba(var(--color-foreground), 0.75);
     background-color: rgb(var(--color-background));
+  }
+
+  {{ dark_mode_classes | prepend: 'body.dark-mode-active' }} {
+    color: rgba(var(--dark-color-foreground), 0.75);
+    background-color: rgb(var(--dark-color-background));
   }
 
   :root {

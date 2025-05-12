@@ -7,10 +7,14 @@
   font-weight: 600;
   font-size: 40px;
   line-height: 130%;
-  color: #000000;
+  color: rgb(var(--color-foreground));
   text-transform: uppercase;
   margin-top: 0px;
   margin-bottom: 50px;
+}
+
+.dark-mode-active .featured-collections-title {
+  color: rgb(var(--dark-color-foreground));
 }
 
 .featured-collections-collections {
@@ -61,7 +65,11 @@
   font-size: 32px;
   line-height: 42px;
   text-transform: uppercase;
-  color: #000000;
+  color: rgb(var(--color-foreground));
+}
+
+.dark-mode-active .featured-collections-collection-title {
+  color: rgb(var(--color-foreground));
 }
 
 .featured-collections-collection-count {

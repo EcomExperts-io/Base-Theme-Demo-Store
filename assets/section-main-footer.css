@@ -281,9 +281,9 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer__payment {
+  /* .footer__payment {
     margin-top: 1.5rem;
-  }
+  } */
 }
 
 .footer__content-bottom-wrapper--center {
@@ -312,9 +312,9 @@
   }
 }
 
-.footer-block__details-content {
+/* .footer-block__details-content {
   margin-bottom: 4rem;
-}
+} */
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content {

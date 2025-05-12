@@ -29,6 +29,10 @@
   overflow: hidden;
 }
 
+.dark-mode-active .card-heading a {
+  color: rgb(var(--dark-color-foreground));
+}
+
 .product-card:hover .card-heading {
   text-decoration: underline;
   text-underline-offset: 2px;

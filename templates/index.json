@@ -15,7 +15,7 @@
         "component_hero_banner_slider_RyPfzp": {
           "type": "_component-hero-banner-slider",
           "settings": {
-            "image": "shopify://shop_images/pexels-misolo.png",
+            "image": "shopify://shop_images/pexels-misolo-cosmetic-4841488.png",
             "image_overlay_opacity": 30,
             "image_height": "large",
             "desktop_content_position": "middle-center",
@@ -51,7 +51,7 @@
             "component_hero_banner_button_QPDkEj": {
               "type": "_component-hero-banner-button",
               "settings": {
-                "button_label": "Button label",
+                "button_label": "SHOP ALL",
                 "button_link": ""
               },
               "blocks": {}
@@ -66,7 +66,7 @@
         "component_hero_banner_slider_AiMWyt": {
           "type": "_component-hero-banner-slider",
           "settings": {
-            "image": "shopify://shop_images/pexels-misolo.png",
+            "image": "shopify://shop_images/pexels-misolo-cosmetic-4841488_eecabf24-3544-4aac-aaff-e60629468f4f.png",
             "image_overlay_opacity": 30,
             "image_height": "large",
             "desktop_content_position": "middle-center",
@@ -102,7 +102,7 @@
             "component_hero_banner_button_CVKfNW": {
               "type": "_component-hero-banner-button",
               "settings": {
-                "button_label": "Button label",
+                "button_label": "SHOP ALL",
                 "button_link": ""
               },
               "blocks": {}
@@ -117,7 +117,7 @@
         "component_hero_banner_slider_QTHqNi": {
           "type": "_component-hero-banner-slider",
           "settings": {
-            "image": "shopify://shop_images/pexels-misolo.png",
+            "image": "shopify://shop_images/pexels-misolo-cosmetic-4841488.png",
             "image_overlay_opacity": 30,
             "image_height": "large",
             "desktop_content_position": "middle-center",
@@ -153,7 +153,7 @@
             "component_hero_banner_button_ENg8kx": {
               "type": "_component-hero-banner-button",
               "settings": {
-                "button_label": "Button label",
+                "button_label": "SHOP ALL",
                 "button_link": ""
               },
               "blocks": {}
@@ -183,7 +183,7 @@
           "type": "card",
           "settings": {
             "background_color": "#ffffff",
-            "image": "shopify://shop_images/Mask_group_31972532-c4bc-4ab9-b330-a9f95d74363d.png",
+            "image": "shopify://shop_images/Mask_group.png",
             "title": "New Arrival",
             "link": "#"
           }
@@ -192,7 +192,7 @@
           "type": "card",
           "settings": {
             "background_color": "#f4f4f4",
-            "image": "shopify://shop_images/Mask_group_1_2aafeec4-2ecc-41b4-9172-78fd4e2b0f60.png",
+            "image": "shopify://shop_images/Mask_group_1.png",
             "title": "Best Sellers",
             "link": "#"
           }
@@ -220,25 +220,25 @@
         "collection_pYLjgz": {
           "type": "collection",
           "settings": {
-            "collection": "spring"
+            "collection": "winter"
           }
         },
         "collection_c6AzNL": {
           "type": "collection",
           "settings": {
-            "collection": "summer"
+            "collection": "winter"
           }
         },
         "collection_PAqbPj": {
           "type": "collection",
           "settings": {
-            "collection": "spring"
+            "collection": "winter"
           }
         },
         "collection_LjLHDk": {
           "type": "collection",
           "settings": {
-            "collection": "summer"
+            "collection": "winter"
           }
         }
       },
@@ -260,7 +260,7 @@
       "type": "exclusive-collection-promo",
       "settings": {
         "background_image": "shopify://shop_images/Rectangle_26070.png",
-        "collection": "spring",
+        "collection": "winter",
         "products_limit": 9,
         "show_vendor": false,
         "enable_swatches": false,
@@ -281,28 +281,28 @@
         "icon_with_text_G6DGkk": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/Natural.png",
+            "image": "shopify://shop_images/Frame.png",
             "title": "Natural Ingredients"
           }
         },
         "icon_with_text_9N88Wb": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/Vegan.png",
+            "image": "shopify://shop_images/Frame_1.png",
             "title": "Vegan & Cruelty-Free"
           }
         },
         "icon_with_text_JTKKcx": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/Quality.png",
+            "image": "shopify://shop_images/undefined.png",
             "title": "Professional Quality"
           }
         },
         "icon_with_text_MUDgMN": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/Leaf.png",
+            "image": "shopify://shop_images/undefined_copy.png",
             "title": "Sustainable Beauty"
           }
         }
@@ -329,7 +329,7 @@
     "newsletter_dWCL3K": {
       "type": "newsletter",
       "settings": {
-        "background_image": "shopify://shop_images/Frame_1000009737.png",
+        "background_image": "shopify://shop_images/Apple_Watch_Band_1.png",
         "title": "JOIN MK BEAUTY CLUB",
         "description": "Do you want to receive Barton's latest on product releases and exclusive offers? Enter your email & stay in the know!",
         "button_text": "Sign up",

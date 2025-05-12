@@ -1,0 +1,164 @@
+{% comment %}
+  Section to display promotional icons with text.
+  Content is dynamically configured via blocks in the theme editor.
+{% endcomment %}
+
+<div class="promo-icons-section page-width">
+  {%- if section.blocks.size > 0 -%}
+    <ul class="promo-icons__list list-unstyled" role="list">
+      {%- for block in section.blocks -%}
+        <li class="promo-icons__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon_image != blank -%}
+            <div class="promo-icons__icon-wrapper">
+              {%- assign image = block.settings.icon_image -%}
+              {{ image | image_url: width: 120 | image_tag: loading: 'lazy', class: 'promo-icons__icon', widths: '60, 120', sizes: '60px' }}
+            </div>
+          {%- else -%}
+            <div class="promo-icons__icon-wrapper promo-icons__icon-placeholder">
+              {% comment %} Placeholder if no image is selected {% endcomment %}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-placeholder"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+            <p class="promo-icons__text">{{ block.settings.text | escape }}</p>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+{%- comment -%} Moved the style block before the schema {%- endcomment -%}
+{%- style -%}
+  .promo-icons-wrapper {
+    background-color: #f8f9fa; /* Light gray background */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .promo-icons-section {
+    /* Uses page-width for max width and centering */
+  }
+
+  .promo-icons__list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem; /* Spacing between items */
+  }
+
+  .promo-icons__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack icon and text vertically by default */
+    text-align: center;
+    flex: 1 1 150px; /* Allow items to grow/shrink, base width ~150px */
+    min-width: 120px; /* Minimum width before wrapping */
+  }
+
+  .promo-icons__icon-wrapper {
+    width: 60px; /* Icon circle size */
+    height: 60px;
+    border: 1px solid #dee2e6; /* Icon circle border */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem; /* Space below icon */
+    overflow: hidden; /* Ensure image stays within the circle */
+    background-color: #ffffff; /* Optional: white background for images */
+  }
+
+  .promo-icons__icon {
+    display: block;
+    width: 100%; /* Make image fill the wrapper */
+    height: 100%;
+    object-fit: contain; /* Scale image nicely within the circle */
+  }
+
+  /* Placeholder specific styles */
+  .promo-icons__icon-placeholder {
+    border: 1px dashed #adb5bd;
+  }
+  .promo-icons__icon-placeholder .icon {
+    width: 30px;
+    height: 30px;
+    stroke: #adb5bd;
+  }
+
+  .promo-icons__text {
+    font-size: 0.85rem; /* Adjust text size as needed */
+    font-weight: 600; /* Make text bolder */
+    letter-spacing: 0.05em; /* Slight letter spacing */
+    color: #212529; /* Text color */
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Optional: Adjust layout for larger screens */
+  @media (min-width: 750px) {
+    .promo-icons__item {
+      flex-direction: row; /* Icon and text side-by-side */
+      text-align: left;
+      gap: 1rem; /* Space between icon and text */
+      align-items: center; /* Ensure vertical alignment */
+    }
+    .promo-icons__icon-wrapper {
+      margin-bottom: 0; /* Remove bottom margin when side-by-side */
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Promo Icons",
+  "tag": "section",
+  "class": "promo-icons-wrapper",
+  "max_blocks": 6, // Allow up to 6 icons, adjust as needed
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Add blocks below to display promotional icons with text."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_block",
+      "name": "Promo Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image",
+          "info": "Recommended size: 60x60px (will be displayed in a circle)."
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text Label",
+          "default": "Promo Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promo Icons",
+      "blocks": [{ "type": "icon_block" }, { "type": "icon_block" }, { "type": "icon_block" }, { "type": "icon_block" }]
+    }
+  ]
+}
+{% endschema %}

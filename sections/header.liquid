@@ -12,6 +12,19 @@
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
 
+  .dark-mode-active #shopify-section-{{ section.id }} {
+    background: rgb(var(--dark-color-background));
+  }
+  
+/* DARK MODE */
+  .dark-mode-icon,
+  .light-mode-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
   {% if section.settings.sticky_header_type == 'on-scroll-up' %}
     #shopify-section-{{ section.id }}
     .header-sticky {
@@ -38,6 +51,11 @@
     color: rgb(var(--color-foreground));
     font-family: var(--font-heading-family);
   }
+
+  .dark-mode-active #main-header .header-shop_name {
+    color: rgb(var(--dark-color-foreground));
+  }
+
   #main-header .header-shop_name {
     font-size: 24px;
     font-weight: normal;
@@ -125,6 +143,12 @@
     align-items: center;
     justify-content: center;
   }
+
+  .dark-mode-active [data-cart-count] {
+    background: rgb(var(--dark-color-foreground));
+    color: rgb(var(--dark-color-background));
+  }
+
   .header-actions,
   .header-actions > * {
     display: flex;
@@ -327,6 +351,57 @@
           -%}
         </div>
       {% endif %}
+
+      <div
+        class="dark-mode-toggle"
+        x-data="
+          {
+            darkMode: localStorage.getItem('darkMode') === 'true' ||
+            (localStorage.getItem('darkMode') === null &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+          }
+        "
+        x-init="
+          () => {
+            if (darkMode) document.body.classList.add('dark-mode-active');
+
+            // Listen for system preference changes
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const handleChange = (e) => {
+              if (localStorage.getItem('darkMode') === null) {
+                darkMode = e.matches;
+              }
+            };
+
+            if (mediaQuery.addEventListener) {
+              mediaQuery.addEventListener('change', handleChange);
+            }
+
+            $watch('darkMode', val => {
+              localStorage.setItem('darkMode', val);
+              if (val) {
+                document.body.classList.add('dark-mode-active');
+              } else {
+                document.body.classList.remove('dark-mode-active');
+              }
+            })
+          }
+        "
+        @click="darkMode = !darkMode"
+        role="button"
+        aria-label="Toggle dark mode"
+      >
+        <div class="dark-mode-icon" x-show="darkMode" x-transition:enter="transition ease-out duration-300" style="display: none;">
+          <svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.539 47.539">
+            <g><g><path d="M24.997,47.511C11.214,47.511,0,36.298,0,22.515C0,12.969,5.314,4.392,13.869,0.132 c0.385-0.191,0.848-0.117,1.151,0.186s0.381,0.766,0.192,1.15C13.651,4.64,12.86,8.05,12.86,11.601 c0,12.681,10.316,22.997,22.997,22.997c3.59,0,7.033-0.809,10.236-2.403c0.386-0.191,0.848-0.117,1.151,0.186 c0.304,0.303,0.381,0.766,0.192,1.15C43.196,42.153,34.597,47.511,24.997,47.511z M12.248,3.372C5.862,7.608,2,14.709,2,22.515 c0,12.68,10.316,22.996,22.997,22.996c7.854,0,14.981-3.898,19.207-10.343c-2.668,0.95-5.464,1.43-8.346,1.43 c-13.783,0-24.997-11.214-24.997-24.997C10.861,8.761,11.327,6.005,12.248,3.372z" style="fill: rgb(1, 0, 2); stroke: white;"></path></g></g>
+          </svg>
+        </div>
+        <div class="light-mode-icon" x-show="!darkMode" x-transition:enter="transition ease-out duration-300">
+          <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#a)" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"><path d="M5 12H1M23 12h-4M7.05 7.05 4.222 4.222M19.778 19.778 16.95 16.95M7.05 16.95l-2.828 2.828M19.778 4.222 16.95 7.05" stroke-linecap="round"></path><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" fill="#000000" fill-opacity=".16"></path><path d="M12 19v4M12 1v4" stroke-linecap="round"></path></g><defs><clipPath id="a"><path fill="#ffffff" d="M0 0h24v24H0z"></path></clipPath></defs>
+          </svg>
+        </div>
+      </div>
 
       {% unless section.settings.logo_position == 'top-center' or section.settings.menu == blank %}
         {{ header_search }}

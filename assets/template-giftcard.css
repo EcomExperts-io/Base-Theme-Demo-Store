@@ -334,3 +334,7 @@ h2,
   background: var(--gradient-background);
   background-attachment: fixed;
 }
+
+.dark-mode-active .gradient {
+  background: rgb(var(--dark-color-background));
+}

@@ -331,6 +331,20 @@ h5,
   word-break: break-word;
 }
 
+.dark-mode-active h1,
+.dark-mode-active h2,
+.dark-mode-active h3,
+.dark-mode-active h4,
+.dark-mode-active h5,
+.dark-mode-active .h0,
+.dark-mode-active .h1,
+.dark-mode-active .h2,
+.dark-mode-active .h3,
+.dark-mode-active .h4,
+.dark-mode-active .h5 {
+  color: rgb(var(--dark-color-foreground));
+}
+
 .hxxl {
   font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
   line-height: 1.1;
@@ -1347,6 +1361,11 @@ button.shopify-payment-button__button--unbranded {
   outline: 0;
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+}
+
+.dark-mode-active .button:focus:not(:focus-visible):not(.focused),
+.dark-mode-active .shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(.focused) {
+  box-shadow: inherit;
 }
 
 .button:focus:not(:focus-visible):not(.focused),
@@ -3008,6 +3027,11 @@ details-disclosure > details {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
+  transition: background 0.3s ease;
+}
+
+.dark-mode-active .gradient {
+  background: rgb(var(--dark-color-background));
 }
 
 @media screen and (forced-colors: active) {

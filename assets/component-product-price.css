@@ -5,6 +5,10 @@
   color: rgb(var(--color-foreground));
 }
 
+.dark-mode-active .price {
+  color: rgb(var(--dark-color-foreground));
+}
+
 .price > * {
   display: inline-block;
   vertical-align: top;

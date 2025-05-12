@@ -81,6 +81,46 @@
             "id": "shadow",
             "label": "t:settings_schema.colors.settings.shadow.label",
             "default": "#121212"
+          },
+          {
+            "type": "header",
+            "content": "Dark Mode Colors"
+          },
+          {
+            "type": "color",
+            "id": "dark_background",
+            "label": "Dark Background",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "dark_text",
+            "label": "Dark Text",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "id": "dark_button",
+            "label": "Dark Button",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "id": "dark_button_label",
+            "label": "Dark Button Label",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "dark_secondary_button_label",
+            "label": "Dark Secondary Button Label",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "id": "dark_shadow",
+            "label": "Dark Shadow",
+            "default": "#FFFFFF"
           }
         ],
         "role": {

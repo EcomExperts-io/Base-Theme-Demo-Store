@@ -53,9 +53,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 244px;
+  height: 100%;
   width: 100%;
-  max-width: 244px;
   object-fit: cover;
   object-position: top;
 }

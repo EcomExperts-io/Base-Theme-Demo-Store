@@ -40,8 +40,16 @@
   background: var(--background-color-1);
 }
 
+.dark-mode-active .collections__promotion-card:first-child {
+  background: #404040;
+}
+
 .collections__promotion-card:last-child {
   background: var(--background-color-2);
+}
+
+.dark-mode-active .collections__promotion-card:last-child {
+  background: #282828;
 }
 
 .collections__promotion-card-title {
@@ -55,7 +63,11 @@
 }
 
 .dark-mode-active .collections__promotion-card-title {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--dark-color-foreground));
+}
+
+.dark-mode-active .collections__promotion-card-button svg path {
+  stroke: rgb(var(--dark-color-foreground));
 }
 
 .collections__promotion-card-button {
@@ -72,6 +84,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dark-mode-active .collections__promotion-card-button a {
+  border: 1px solid rgb(var(--dark-color-foreground));
 }
 
 .collections__promotion-content-title {

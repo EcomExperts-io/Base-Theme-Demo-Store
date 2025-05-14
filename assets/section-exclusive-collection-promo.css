@@ -7,7 +7,7 @@
 }
 
 .dark-mode-active .exclusive-collection-promo-child {
-  background: rgb(var(--dark-color-background));
+  background: #282828;
 }
 
 .exclusive-collection-promo-media {

@@ -37,6 +37,10 @@
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
 }
 
+.dark-mode-active .featured-collections-collection {
+  background: #282828;
+}
+
 .featured-collections-collection-link {
   margin: 30px 0px;
   width: 100%;
@@ -69,7 +73,7 @@
 }
 
 .dark-mode-active .featured-collections-collection-title {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--dark-color-foreground));
 }
 
 .featured-collections-collection-count {
@@ -80,6 +84,10 @@
   font-size: 16px;
   line-height: 21px;
   color: #000000;
+}
+
+.dark-mode-active .featured-collections-collection-count {
+  color: rgb(var(--dark-color-foreground));
 }
 
 .featured-collections-button {
@@ -93,6 +101,14 @@
   cursor: pointer;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.dark-mode-active .featured-collections-button {
+  border: 1px solid rgb(var(--dark-color-foreground));
+}
+
+.dark-mode-active .featured-collections-button svg path {
+  stroke: rgb(var(--dark-color-foreground));
 }
 
 @media screen and (max-width: 1024px) {

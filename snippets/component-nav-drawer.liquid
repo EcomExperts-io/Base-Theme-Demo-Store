@@ -43,11 +43,13 @@
     width: 100%;
     color: rgba(var(--color-foreground), 0.75);
   }
+  
   #menu-drawer a:hover {
     color: rgb(var(--color-foreground));
   }
 
-  .dark-mode-active #menu-drawer a {
+  .dark-mode-active #menu-drawer a,
+  .dark-mode-active #menu-drawer .menu-toggle {
     color: rgb(var(--dark-color-foreground));
     border-bottom: 1px solid rgb(var(--dark-color-foreground));
   }

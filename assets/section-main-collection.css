@@ -76,6 +76,10 @@
   max-width: 130px;
 }
 
+.dark-mode-active .facet-filters__sort {
+  color: rgb(var(--dark-color-foreground));
+}
+
 .facet-filters__sort:focus {
   box-shadow: none;
   border: none;
@@ -246,6 +250,10 @@
   .facet-checkbox:hover {
     color: rgba(var(--color-foreground), 1);
     text-decoration: underline;
+  }
+
+  .dark-mode-active .facet-checkbox:hover {
+    color: rgb(var(--dark-color-foreground));
   }
 
   .facet-checkbox input[type='checkbox'] {

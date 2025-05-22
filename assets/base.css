@@ -2432,6 +2432,10 @@ input[type='checkbox'] {
 }
 
 /* Main Header Layout */
+.dark-mode-active a.header-shop_link {
+    filter: invert(1);
+}
+
 .header-wrapper {
   display: block;
   position: relative;

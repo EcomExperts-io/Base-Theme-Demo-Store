@@ -15,7 +15,7 @@
         "component_hero_banner_slider_RyPfzp": {
           "type": "_component-hero-banner-slider",
           "settings": {
-            "image": "shopify://shop_images/pexels-misolo-cosmetic-4841488.png",
+            "image": "shopify://shop_images/pexels-misolo.png",
             "image_overlay_opacity": 30,
             "image_height": "large",
             "desktop_content_position": "middle-center",
@@ -66,7 +66,7 @@
         "component_hero_banner_slider_AiMWyt": {
           "type": "_component-hero-banner-slider",
           "settings": {
-            "image": "shopify://shop_images/pexels-misolo-cosmetic-4841488_eecabf24-3544-4aac-aaff-e60629468f4f.png",
+            "image": "shopify://shop_images/pexels-misolo.png",
             "image_overlay_opacity": 30,
             "image_height": "large",
             "desktop_content_position": "middle-center",
@@ -117,7 +117,7 @@
         "component_hero_banner_slider_QTHqNi": {
           "type": "_component-hero-banner-slider",
           "settings": {
-            "image": "shopify://shop_images/pexels-misolo-cosmetic-4841488.png",
+            "image": "shopify://shop_images/pexels-misolo.png",
             "image_overlay_opacity": 30,
             "image_height": "large",
             "desktop_content_position": "middle-center",
@@ -258,6 +258,7 @@
     },
     "exclusive_collection_promo_MwLLyn": {
       "type": "exclusive-collection-promo",
+      "name": "Exclusive collecton promo",
       "settings": {
         "background_image": "shopify://shop_images/Rectangle_26070.png",
         "collection": "winter",
@@ -281,28 +282,28 @@
         "icon_with_text_G6DGkk": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/Frame.png",
+            "image": "shopify://shop_images/Natural.png",
             "title": "Natural Ingredients"
           }
         },
         "icon_with_text_9N88Wb": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/Frame_1.png",
+            "image": "shopify://shop_images/Vegan.png",
             "title": "Vegan & Cruelty-Free"
           }
         },
         "icon_with_text_JTKKcx": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/undefined.png",
+            "image": "shopify://shop_images/Quality.png",
             "title": "Professional Quality"
           }
         },
         "icon_with_text_MUDgMN": {
           "type": "icon_with_text",
           "settings": {
-            "image": "shopify://shop_images/undefined_copy.png",
+            "image": "shopify://shop_images/Leaf.png",
             "title": "Sustainable Beauty"
           }
         }
@@ -313,6 +314,7 @@
         "icon_with_text_JTKKcx",
         "icon_with_text_MUDgMN"
       ],
+      "name": "Icon with text",
       "settings": {
         "title": "Collections",
         "background_color": "#f4f4f4",
@@ -325,19 +327,6 @@
         "margin_top_mobile": 30,
         "margin_bottom_mobile": 30
       }
-    },
-    "newsletter_dWCL3K": {
-      "type": "newsletter",
-      "settings": {
-        "background_image": "shopify://shop_images/Apple_Watch_Band_1.png",
-        "title": "JOIN MK BEAUTY CLUB",
-        "description": "Do you want to receive Barton's latest on product releases and exclusive offers? Enter your email & stay in the know!",
-        "button_text": "Sign up",
-        "padding_top_desktop": 95,
-        "padding_bottom_desktop": 95,
-        "padding_top_mobile": 85,
-        "padding_bottom_mobile": 85
-      }
     }
   },
   "order": [
@@ -345,7 +334,6 @@
     "collections_promotion_HMe7bT",
     "featured_collections_mCW4Cm",
     "exclusive_collection_promo_MwLLyn",
-    "icon_with_text_RjUC96",
-    "newsletter_dWCL3K"
+    "icon_with_text_RjUC96"
   ]
 }

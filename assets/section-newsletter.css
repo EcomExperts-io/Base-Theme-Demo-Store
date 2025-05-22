@@ -1,104 +1,108 @@
-.newsletter-title {
-  font-family: 'Assistant';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 140%;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.4px;
-  color: #000000;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
 
-.newsletter-description {
-  font-family: 'Assistant';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.6px;
-  color: #000000;
-  max-width: 480px;
-}
-
-input.newsletter-form-input {
-  background: transparent;
-  box-shadow: none;
-  border: 1px solid black;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 36px;
-  width: 100%;
-  max-width: 400px;
-  font-size: 18px;
-}
-
-input.newsletter-form-input::placeholder {
-  font-family: 'Assistant';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 140%;
-  color: #000000;
-}
-
-input.newsletter-form-input:active,
-input.newsletter-form-input:focus {
-  outline: none;
-}
-
-.newsletter_form {
-  display: flex;
-  justify-content: flex-start;
-  gap: 15px;
-  margin-top: 50px;
-}
-
-button.newsletter-form-button {
-  padding: 15px 30px;
-  cursor: pointer;
-  font-family: 'Assistant';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-  border: 1px solid black;
-  background: #3b352e;
-}
-
-@media screen and (max-width: 749px) {
-  .newsletter-child {
-    text-align: center;
-  }
-
-  .newsletter_form {
-    flex-direction: column;
-  }
-
-  .newsletter-title {
-    font-size: 20px;
-    letter-spacing: 0.4px;
-    color: #000000;
+  .newsletter-section {
+    position: relative;
+    width: 100%;
+    height: 399px;
+    background-image: url('https://blackmamba-5.myshopify.com/cdn/shop/files/Apple_Watch_Band_1.png?v=1744804919&width=4320');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+
+  .newsletter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .newsletter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 488px;
+  }
+
+  body .newsletter-heading {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    margin: 0;
+    color: #000000;
   }
 
   .newsletter-description {
-    font-size: 14px;
-    letter-spacing: 0.6px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
     color: #000000;
-    margin: 0 auto;
   }
 
-  input.newsletter-form-input {
-    max-width: 100%;
-    padding: 17.3px 30px;
-    text-align: center;
+  .newsletter-form-fields {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
   }
-}
+
+  .newsletter-input-wrapper {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 0 15px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    background-color: transparent;
+  }
+
+  .newsletter-submit {
+    height: 50px;
+    padding: 15px 30px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .newsletter-submit:hover {
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 767px) {
+    .newsletter-section {
+      height: auto;
+      padding: 40px 20px;
+    }
+
+    .newsletter-form-fields {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .newsletter-input-wrapper {
+      max-width: 100%;
+    }
+
+    .newsletter-submit {
+      width: 100%;
+    }
+  }

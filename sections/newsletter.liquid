@@ -1,124 +1,71 @@
-{%- style -%}
-  #section-{{ section.id }} {
-    background-image: url({{ section.settings.background_image | image_url: width: section.settings.background_image.width }});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  #section-{{ section.id }} .newsletter-child {
-    padding-top: {{ section.settings.padding_top_desktop }}px;
-    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
-  }
-
-  @media screen and (max-width: 749px) {
-    #section-{{ section.id }} .newsletter-child {
-      padding-top: {{ section.settings.padding_top_mobile }}px;
-      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
-    }
-  }
-{%- endstyle -%}
-
 {{ 'section-newsletter.css' | asset_url | stylesheet_tag }}
 
-<div class="newsletter" id="section-{{ section.id }}">
-  <div class="newsletter-child page-width">
-    <h2 class="newsletter-title">
-      {{ section.settings.title }}
-    </h2>
-    <p class="newsletter-description">
-      {{ section.settings.description }}
-    </p>
-    {% form 'customer', class: 'newsletter_form' %}
-      <input
-        type="email"
-        name="contact[email]"
-        aria-required="true"
-        autocorrect="off"
-        autocapitalize="off"
-        autocomplete="email"
-        placeholder="Enter your email"
-        class="newsletter-form-input"
-        required
-      >
-      <button type="submit" class="newsletter-form-button">
-        {{ section.settings.button_text }}
-      </button>
-      {%- if form.errors -%}
-        <div class="newsletter-form-error">
-          {{ form.errors | default_errors }}
-        </div>
+<div class="newsletter-section">
+  <div class="newsletter-container page-width">
+    <div class="newsletter-content">
+      {%- if section.settings.heading -%}
+        <h2 class="newsletter-heading">{{ section.settings.heading }}</h2>
       {%- endif -%}
-    {% endform %}
+      {%- if section.settings.description -%}
+        <p class="newsletter-description">
+          {{ section.settings.description }}
+        </p>
+      {%- endif -%}
+    </div>
+    <form class="newsletter-form" action="/contact#newsletter-form" method="post">
+      <input type="hidden" name="form_type" value="customer">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="newsletter-form-fields">
+        <div class="newsletter-input-wrapper">
+          <input
+            type="email"
+            name="contact[email]"
+            id="newsletter-email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+            required
+          >
+        </div>
+        {%- if section.settings.button_text -%}
+          <button type="submit" class="newsletter-submit">
+            {{ section.settings.button_text }}
+          </button>
+        {%- else -%}
+          <button type="submit" class="newsletter-submit">SIGN UP</button>
+        {%- endif -%}
+      </div>
+    </form>
   </div>
 </div>
 
-{%- schema -%}
+
+{% schema %}
 {
   "name": "Newsletter",
   "settings": [
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image"
+      "label": "Background Image"
     },
     {
       "type": "text",
-      "id": "title",
-      "label": "Title",
-      "default": "Newsletter"
+      "id": "heading",
+      "label": "Heading",
+      "default": "JOIN MK BEAUTY CLUB"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Subscribe to our newsletter to get the latest news and updates."
+      "default": "Do you want to receive Barton's latest on product releases and exclusive offers? Enter your email & stay in the know!"
     },
     {
       "type": "text",
       "id": "button_text",
-      "label": "Button text",
-      "default": "Sign up"
-    },
-    {
-      "type": "header",
-      "content": "Section Settings"
-    },
-    {
-      "type": "range",
-      "id": "padding_top_desktop",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "label": "Padding top [Desktop]",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom_desktop",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "label": "Padding bottom [Desktop]",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "padding_top_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "label": "Padding top [Mobile]",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "label": "Padding bottom [Mobile]",
-      "default": 20
+      "label": "Button Text",
+      "default": "SIGN UP"
     }
   ],
   "presets": [
@@ -127,4 +74,4 @@
     }
   ]
 }
-{%- endschema -%}
+{% endschema %}

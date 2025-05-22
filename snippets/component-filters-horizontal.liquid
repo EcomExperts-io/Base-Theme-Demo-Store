@@ -32,10 +32,18 @@
     margin-right: 5px;
   }
 
+  .dark-mode-active .filter-button {
+    color: rgb(var(--dark-color-foreground));
+  }
+
   .filter-button:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
     color: rgba(var(--color-foreground), 1);
+  }
+
+  .dark-mode-active .filter-button:hover {
+    color: rgb(var(--dark-color-foreground));
   }
 
   .filter-button .icon-caret {
@@ -62,6 +70,14 @@
     z-index: 5;
   }
 
+  .dark-mode-active .filter-content {
+    background-color: rgb(var(--dark-color-background));
+    border-color: rgba(var(--dark-color-foreground), var(--popup-border-opacity));
+    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
+      rgba(var(--dark-color-shadow), var(--popup-shadow-opacity));
+    color: rgb(var(--dark-color-foreground));
+  }
+
   .filter-content .facets__list {
     padding: 7px 20px;
     list-style-type: none;
@@ -78,6 +94,11 @@
     position: sticky;
     top: 0px;
     z-index: 1;
+  }
+
+  .dark-mode-active .facets__head-wrapper {
+    border-bottom: 1px solid rgba(var(--dark-color-foreground), 0.2);
+    background-color: rgb(var(--dark-color-background));
   }
 
   .facet-reset {

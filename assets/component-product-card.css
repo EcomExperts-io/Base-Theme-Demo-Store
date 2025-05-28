@@ -56,6 +56,10 @@
   letter-spacing: 1px;
 }
 
+.dark-mode-active .card-vendor {
+  color: rgb(var(--dark-color-foreground));
+}
+
 .product-color-swatches:empty {
   display: flex;
 }

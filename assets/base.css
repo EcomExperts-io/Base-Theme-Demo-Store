@@ -1481,6 +1481,10 @@ shopify-accelerated-checkout-cart {
   min-height: 4.4rem;
 }
 
+.dark-mode-active .share-button__button {
+  color: #fff;
+}
+
 details[open] > .share-button__fallback {
   animation: animateMenuOpen var(--duration-default) ease;
 }
@@ -3031,11 +3035,10 @@ details-disclosure > details {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
-  transition: background 0.3s ease;
 }
 
 .dark-mode-active .gradient {
-  background: rgb(var(--dark-color-background));
+  background: #282828;
 }
 
 @media screen and (forced-colors: active) {

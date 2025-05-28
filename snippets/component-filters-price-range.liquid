@@ -28,6 +28,10 @@
     justify-content: space-between;
   }
 
+  .dark-mode-active .price-input {
+    color: rgb(var(--dark-color-foreground));
+  }
+
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -53,6 +57,10 @@
     border-radius: 5px;
     background: #000;
     display:block;
+  }
+
+  .dark-mode-active .slider-container .price-slider {
+    background: rgb(var(--dark-color-foreground));
   }
 
   .range-input {

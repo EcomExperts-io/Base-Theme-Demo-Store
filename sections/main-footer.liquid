@@ -182,6 +182,10 @@
       transform: rotate(180deg);
     }
 
+    .dark-mode-active .accordion-icon svg path {
+      stroke: rgb(var(--dark-color-foreground));
+    }
+
     .footer__payment-header {
       margin-bottom: 1rem;
     }
@@ -207,6 +211,10 @@
       margin-top: 1.5rem;
       padding-top: 1.5rem;
       border-top: 1px solid rgb(var(--color-foreground));
+    }
+
+    .dark-mode-active .footer__copyright {
+      border-top: 1px solid rgb(var(--dark-color-foreground));
     }
 
      .footer__copyright .copyright__content {

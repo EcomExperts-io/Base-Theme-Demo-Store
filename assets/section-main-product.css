@@ -158,13 +158,29 @@ product-info .product__info-wrapper form > *:last-child {
   position: relative;
 }
 
+.dark-mode-active .pill-label {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 .product-form__input input[type='radio'] + label:hover {
   border-color: rgb(var(--color-foreground));
+}
+
+.dark-mode-active .product-form__input input[type='radio'] + label:hover {
+  border-color: #fff;
 }
 
 .pill-radio:checked + .pill-label {
   background-color: rgb(var(--color-foreground));
   color: rgb(var(--color-background));
+}
+
+.dark-mode-active .pill-radio:checked + .pill-label {
+  background-color: #E8B904;
+  border-color: #E8B904;
+  color: #000;
 }
 
 .pill-label.pill-disabled {
@@ -199,6 +215,10 @@ product-info .product__info-wrapper form > *:last-child {
   color: rgb(var(--color-foreground));
 }
 
+.dark-mode-active .product__quantity button {
+  color: #fff;
+}
+
 .product__quantity .option__label {
   margin-bottom: 7px;
 }
@@ -215,6 +235,10 @@ product-info .product__info-wrapper form > *:last-child {
   width: calc(140px / 1 + 1px * 2);
   min-height: calc((1px * 2) + 40px);
   outline: var(--inputs-border-width) solid rgba(var(--color-foreground), var(--inputs-border-opacity));
+}
+
+.dark-mode-active .product__quantity quantity-selector {
+  outline: 1px solid #fff;
 }
 
 .product__quantity quantity-selector input {
@@ -249,6 +273,22 @@ product-info .product__info-wrapper form > *:last-child {
   letter-spacing: 1px;
   color: var(--color-secondary-button);
   position: relative;
+}
+
+.dark-mode-active .product-form__buttons button {
+  outline: 1px solid #fff;
+}
+
+.dark-mode-active .product-form__buttons .shopify-payment-button__button {
+  background: #E8B904;
+  color: #000;
+  outline: 1px solid #E8B904;
+}
+
+.dark-mode-active .product-form__buttons .shopify-payment-button__button:hover {
+  background: #E8B904;
+  color: #000;
+  outline: 1px solid #E8B904;
 }
 
 .product-form__buttons button:hover {
@@ -465,6 +505,11 @@ shopify-buy-it-now-button .shopify-payment-button__button {
   .product__title h2 {
     font-size: 40px;
     color: rgb(var(--color-foreground));
+  }
+
+  .dark-mode-active .product__title h1,
+  .dark-mode-active .product__title h2 {
+    color: rgb(var(--dark-color-foreground));
   }
 
   .product--small .product__variants variant-selector,

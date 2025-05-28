@@ -33,6 +33,10 @@
   font-size: 14px;
 }
 
+.dark-mode-active .pagination__item {
+  color: rgb(var(--dark-color-foreground));
+}
+
 .pagination__item.pagination__item--current {
   cursor: not-allowed;
 }

@@ -23,6 +23,10 @@
       font-weight: {{ section.settings.variant_label_font_weight }};
     }
 
+    .dark-mode-active .option__label {
+      color: rgb(var(--dark-color-foreground));
+    }
+
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'title' %}
@@ -37,11 +41,17 @@
             font-size: {{ block.settings.description_font_size }}px;
             font-weight: {{ block.settings.description_font_weight }};
           }
+          .dark-mode-active .product__description {
+            color: rgb(var(--dark-color-foreground));
+          }
         {% when 'price' %}
           .price-item {
             color: {{ block.settings.price_color }};
             font-size: {{ block.settings.price_font_size }}px;
             font-weight: {{ block.settings.price_font_weight }};
+          }
+          .dark-mode-active .price-item {
+            color: rgb(var(--dark-color-foreground));
           }
       {% endcase %}
     {% endfor %}
@@ -59,7 +69,7 @@
 
   {% assign selected_variant = product.selected_or_first_available_variant %}
 
-  <div class="page-width">
+  <div class="full-page-width">
     <div class="product flex product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} {% if section.settings.constrain_to_viewport %}constrain-height{% endif %}">
       <div class="product__media-wrapper flex__item media-{{ section.settings.media_fit }}">
         {% render 'component-product-media-gallery',
